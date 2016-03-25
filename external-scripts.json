@@ -4,7 +4,7 @@
   "hubot-heroku-keepalive",
   "hubot-google-images",
   "hubot-google-translate",
-  "hubot-jenkins-notifier",
+  "hubot-jenkins-slack",
   "hubot-pugme",
   "hubot-maps",
   "hubot-redis-brain",
