@@ -1,4 +1,5 @@
 [
   "hubot-google-translate",
+  "hubot-slack-attachment",
   "redis-brain.coffee"
 ]
