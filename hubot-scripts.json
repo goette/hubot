@@ -1,1 +1,4 @@
-[]
+[
+  "hubot-google-translate",
+  "redis-brain.coffee"
+]
