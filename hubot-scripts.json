@@ -1,5 +1,5 @@
 [
   "hubot-google-translate",
-  "jenkins-notifier.coffee",
+  "jenkins-pubsub-notifier.coffee",
   "redis-brain.coffee"
 ]
