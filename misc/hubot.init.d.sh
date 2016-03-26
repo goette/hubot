@@ -24,6 +24,10 @@ DAEMON=$BOT_PATH/bin/$NAME
 DAEMON_ARGS="--adapter slack --name hubot"
 PIDFILE=$BOT_PATH/$NAME.pid
 LOGFILE=$BOT_PATH/$NAME.log
+HUBOT_SLACK_TOKEN=xoxb-29587493826-wZLIXNOTTxW73kmNKsdKyEnS
+HUBOT_JENKINS_URL=
+HUBOT_JENKINS_AUTH=
+PORT=8888
 SCRIPTNAME=/etc/init.d/$NAME
 INIT_VERBOSE=yes
 
@@ -46,7 +50,7 @@ do_start()
 
   touch $PIDFILE && chown $USER:$GROUP $PIDFILE
 
-    start-stop-daemon --no-close --user $USER --quiet --start --pidfile $PIDFILE -c $USER:$GROUP \
+    HUBOT_JENKINS_URL=$HUBOT_JENKINS_URL HUBOT_JENKINS_AUTH=$HUBOT_JENKINS_AUTH HUBOT_SLACK_TOKEN=$HUBOT_SLACK_TOKEN PORT=$PORT start-stop-daemon --no-close --user $USER --quiet --start --pidfile $PIDFILE -c $USER:$GROUP \
       --make-pidfile \
       --background --chdir $BOT_PATH --exec $DAEMON -- \
         $DAEMON_ARGS >> $LOGFILE 2>&1 \
